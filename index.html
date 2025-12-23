@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOLOMYR AUTO PARTS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="logo">
+            <h1>DOLOMYR AUTO PARTS</h1>
+        </div>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#catalog">Каталог</a>
+            <a href="#about">О нас</a>
+            <a href="#contacts">Контакты</a>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero-content">
+            <h2>Автозапчасти для всех марок</h2>
+            <p>Качество и надежность с 2008 года</p>
+            <a href="#catalog" class="btn pulse-animation">Смотреть каталог</a>
+        </div>
+    </section>
+
+    <div class="search">
+        <input type="text" id="search" placeholder="Поиск запчасти...">
+        <button onclick="searchProducts()"><i class="fas fa-search"></i> Найти</button>
+    </div>
+
+    <section id="catalog">
+        <h2 class="section-title">Каталог запчастей</h2>
+        <div class="products" id="products"></div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">О компании</h2>
+        <div class="about-content">
+            <p>DOLOMYR AUTO PARTS - надежный поставщик автозапчастей.</p>
+            <div class="features">
+                <div class="feature-item"><i class="fas fa-check"></i> Гарантия качества</div>
+                <div class="feature-item"><i class="fas fa-truck"></i> Быстрая доставка</div>
+                <div class="feature-item"><i class="fas fa-headset"></i> Консультация</div>
+                <div class="feature-item"><i class="fas fa-percentage"></i> Скидки оптом</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h2 class="section-title">Контакты</h2>
+        <div class="contacts">
+            <div class="contact-item"><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</div>
+            <div class="contact-item"><i class="fas fa-map-marker"></i> г. Москва</div>
+            <div class="contact-item"><i class="fas fa-clock"></i> Пн-Пт 9:00-18:00</div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> info@dolomyr.ru</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 DOLOMYR AUTO PARTS</p>
+    </footer>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <h3><i class="fas fa-shopping-cart"></i> Корзина</h3>
+            <div id="cartItems"></div>
+            <div class="total">
+                <p>Итого: <span id="total">0</span> ₽</p>
+                <div class="cart-buttons">
+                    <button onclick="checkout()" class="checkout-btn">Оформить заказ</button>
+                    <button onclick="closeCart()" class="close-btn">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-buttons">
+        <button class="floating-btn" onclick="scrollToTop()">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <button class="floating-btn whatsapp" onclick="openWhatsApp()">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
